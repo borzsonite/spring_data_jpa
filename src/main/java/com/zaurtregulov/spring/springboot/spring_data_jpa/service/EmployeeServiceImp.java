@@ -17,19 +17,16 @@ public class EmployeeServiceImp implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
     @Override
-    @Transactional
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
 
     @Override
-    @Transactional
     public void saveEmployee(Employee employee) {
         employeeRepository.save(employee);
     }
 
     @Override
-    @Transactional
     public Employee getEmployee(int id) {
         Employee employee = null;
         Optional<Employee> newEmployee = employeeRepository.findById(id);
@@ -40,8 +37,15 @@ public class EmployeeServiceImp implements EmployeeService {
     }
 
     @Override
-    @Transactional
     public void deleteEmployee(int id) {
        employeeRepository.deleteById(id);
     }
+
+    @Override
+    public List<Employee> findAllByName(String name) {
+        List<Employee> employees = employeeRepository.findAllByName(name);
+        return employees;
+    }
+
+
 }
