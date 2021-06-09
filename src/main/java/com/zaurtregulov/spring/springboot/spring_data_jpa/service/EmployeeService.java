@@ -2,7 +2,8 @@ package com.zaurtregulov.spring.springboot.spring_data_jpa.service;
 
 
 
-import com.zaurtregulov.spring.springboot.spring_course_springboot.entity.Employee;
+
+import com.zaurtregulov.spring.springboot.spring_data_jpa.entity.Employee;
 
 import java.util.List;
 
